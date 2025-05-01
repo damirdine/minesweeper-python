@@ -1,21 +1,22 @@
-from classes import *
-
-tool_box = ToolBox()
-
-hammer = Hammer(color="gray")
-screw_driver = Screwdriver()
-
-tool_box.add_tool(screw_driver)
-tool_box.add_tool(hammer)
-
-screw = Screw()
-print(str(screw))
-screw_driver.tighten(screw)
-print(str(screw))
+from typing import override
 
 
-nail = Nail()
-print(str(nail))
-hammer.hammer_in(nail)
-print(str(nail))
+class Film:
+    def __init__(self, name):
+        self.name = name
+        pass
 
+    def go(self):
+        print("Hello Film")
+
+
+class FilmCassette(Film):
+    pass
+
+    @override
+    def go(self):
+        print("Hello Cassette")
+
+
+cassette = FilmCassette("Popop")
+cassette.go()
