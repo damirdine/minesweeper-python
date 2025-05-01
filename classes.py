@@ -81,7 +81,7 @@ class Screw:
     
     def __str__(self):
         """Retourne une forme lisible de l'objet."""
-        return "Vis avec un serrage de {}".format(self.tightness)
+        return f"Vis avec un serrage de {self.tightness}"
 
 
 class Nail:
