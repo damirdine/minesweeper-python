@@ -1,0 +1,5 @@
+class Painting:
+    """
+    docstring
+    """
+    pass
